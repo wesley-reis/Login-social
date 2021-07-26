@@ -3,17 +3,17 @@
  * SITE CONFIG
  */
 define("SITE", [
-    "name" => "Auth em MVC com PHP",
+    "name" => "Autenticação de login com redes sociais Facebook e Google",
     "desc" => "Aplicação de autenticação em MVC com PHP",
-    "domain" => "wrrdev.com",
+    "domain" => "",
     "locale" => "pt_BR",
-    "root" => "https://login-social.wdev.com.br"
+    "root" => ""
 ]);
 
 /**
  * SITE MINIFY
  */
-if ($_SERVER["SERVER_NAME"] == "login-social.wdev.com.br"){
+if ($_SERVER["SERVER_NAME"] == ""){
     require __DIR__ . "/Minify.php";
 }
 
@@ -22,9 +22,9 @@ if ($_SERVER["SERVER_NAME"] == "login-social.wdev.com.br"){
  */
 define("DATA_LAYER_CONFIG", [
     "driver" => "mysql",
-    "host" => "login-social.wdev.com.br",
+    "host" => "",
     "port" => "3306",
-    "dbname" => "wrrdeveloper",
+    "dbname" => "",
     "username" => "root",
     "passwd" => "",
     "options" => [
@@ -39,37 +39,25 @@ define("DATA_LAYER_CONFIG", [
  * SOCIAL CONFIG
  */
 define("SOCIAL", [
-   "facebook_page" => "lojapwshop",
-   "facebook_author" => "wesley.rodrigues.142892",
-   "facebook_appId" => "2193729837289",
-   "twitter_creator" => "@WesleyR99998115",
-   "twitter_site" => "@WesleyR99998115"
+   "facebook_page" => "",
+   "facebook_author" => "",
+   "facebook_appId" => "",
+   "twitter_creator" => "",
+   "twitter_site" => ""
 ]);
 
 /**
  * MAIL CONNECT
- * Com Gmail
  */
-
-/** Disparo via SandGrid */
-//define("MAIL",[
-//    "host" => "smtp.sendgrid.net",
-//    "port" => "587",
-//    "user" => "apikey",
-//    "passwd" => "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",
-//    "from_name" => "WRR-Developer",
-//    "from_email" => "wrrdeveloper@gmail.com"
-//]);
-
 
 /** Disparo via conta Google */
 define("MAIL",[
-    "host" => "smtp.gmail.com",
-    "port" => "465",
-    "user" => "wesleyepolly16@gmail.com",
-    "passwd" => "wrr230808",
-    "from_name" => "wesley.Reis",
-    "from_email" => "wesleyepolly16@gmail.com"
+    "host" => "",
+    "port" => "",
+    "user" => "",
+    "passwd" => "",
+    "from_name" => "",
+    "from_email" => ""
 ]);
 
 
@@ -77,8 +65,8 @@ define("MAIL",[
  * SOCIAL LOGIN: FACEBOOK
  */
 define("FACEBOOK_LOGIN", [
-    "clientId" => "2960156267596740",
-    "clientSecret" => "82950e86bd50da08ab3aabb1373986cb",
+    "clientId" => "",
+    "clientSecret" => "",
     "redirectUri"=> SITE["root"] . "/facebook",
     "graphApiVersion" => "v4.0"
 ]);
@@ -87,7 +75,7 @@ define("FACEBOOK_LOGIN", [
  * SOCIAL LOGIN: GOOGLE
  */
 define("GOOGLE_LOGIN", [
-    "clientId" => "102701898686-gcph90cq7h2mhd5a12e0lsr616pbij1a.apps.googleusercontent.com",
-    "clientSecret"=> "DZy04xbtOVUxFTYJp5iW26R4",
+    "clientId" => "",
+    "clientSecret"=> "",
     "redirectUri"=> SITE["root"] . "/google"
 ]);
